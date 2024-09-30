@@ -46,19 +46,19 @@ To use an animation, simply add the corresponding class to the element you want 
 Here are the 14 animations provided by MotionPrime:
 
 1. `mp-fade-in`
-2. `mp-fade-out`
-3. `mp-slide-up`
-4. `mp-slide-down`
-5. `mp-slide-left`
-6. `mp-slide-right`
-7. `mp-zoom-in`
-8. `mp-zoom-out`
-9. `mp-rotate`
-10. `mp-bounce`
-11. `mp-flip`
-12. `mp-spin`
-13. `mp-pulse`
-14. `mp-shake`
+2. `mp-slide-in`
+3. `mp-zoom-in`
+4. `mp-button-hove`
+5. `mp-parallax`
+6. `mp-bounce`
+7. `mp-spinner`
+8. `mp-accordion-content` && `mp-accordion-content.open`
+9. `mp-flip`
+10. `mp-shake`
+11. `mp-typewriter`
+12. `mp-reveal` && `mp-reveal.visible`
+13. `mp-page-transition`
+14. `mp-sticky-header` ||`mp-sticky-header.shrink`
 
 ## Example Usage
 

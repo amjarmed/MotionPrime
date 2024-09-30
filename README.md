@@ -1,6 +1,6 @@
 # MotionPrime
 
-[![MotionPrime](https://i.imgur.com/0kNfZqX.gif)](/logo.png)
+[![MotionPrime](./logo.png)](https://www.amjarmed.com/)
 
 **MotionPrime** is a lightweight animation library offering 14 essential animations for modern web development. Designed for simplicity and flexibility, it allows you to enhance your website with smooth, responsive animations, making your web pages more dynamic and engaging.
 

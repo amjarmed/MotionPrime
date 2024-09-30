@@ -29,7 +29,7 @@
  - Where: Common for navigation menus, sidebars, or content that enters from off-screen when triggered.
    - Example: A sidebar menu slides in from the left when the user clicks the menu icon. */
 
-@keyframes slideIn {
+@keyframes slideRight {
   from {
     transform: translateX(-100%);
   }
@@ -37,8 +37,43 @@
     transform: translateX(0);
   }
 }
-.mp-slide-in {
-  animation: slideIn 0.5s ease-out;
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mp-slide-right {
+  animation: slideRight 0.5s ease-out;
+}
+.mp-slide-left {
+  animation: slideLeft 0.5s ease-out;
+}
+.mp-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+.mp-slide-down {
+  animation: slideDown 0.5s ease-out;
 }
 
 /*=========== Zoom In/Out ===========
@@ -250,4 +285,10 @@
 }
 .mp-sticky-header.shrink {
   height: 50px;
+}
+
+/* any css class that start with mp- must be hidden */
+
+.mp-hidden {
+  visibility: hidden;
 }

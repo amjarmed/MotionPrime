@@ -1,0 +1,253 @@
+/*
+ *MotionPrime
+ *https://amjarmed.com
+ *Copyright (c) 2024 Mohamed Amjar
+ *MIT License
+ *Documentation: https://amjarmed.com
+ *Description: A lightweight animation library for modern web development. These animations help improve UX by providing feedback and visual cues, making websites feel interactive and smooth. They are often applied to navigation, headers, buttons, images, and content sections. Tailwind CSS makes adding these animations easier with utility classes, but you can also create custom animations by extending Tailwind or using CSS directly.
+ *
+*/
+
+/*===========  Fade In/Out  ===============
+ - Where: Frequently used for elements that appear on the page, such as headers, images, or sections when the page loads or when scrolling.
+   - Example: A section of text fades in as you scroll down to that part of the webpage.
+    */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/*=========== Slide In/Out ===========
+ - Where: Common for navigation menus, sidebars, or content that enters from off-screen when triggered.
+   - Example: A sidebar menu slides in from the left when the user clicks the menu icon. */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+/*=========== Zoom In/Out ===========
+   - Where: Often used for images or buttons to draw attention, like on hover or when an image is clicked.
+   - Example: A product image zooms in when you hover over it on an e-commerce site.
+
+   */
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.zoom-in {
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+/*=========== Hover Animation ===========
+   - Where: Used on buttons, links, or interactive elements to change their appearance when hovered.
+   - Example: A button changes color and grows slightly larger when hovered to indicate interactivity.
+   */
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: #3498db;
+  transition: all 0.3s ease;
+}
+
+/*=========== Scroll Animations (Parallax) ===========
+   - Where: Used on images or background sections to create a layered effect where elements move at different speeds while scrolling.
+   - Example: A background image moves slower than the content in the foreground as you scroll.
+   
+   */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*===========  Bounce Animation ===========
+   - Where: Common for icons or buttons to draw attention to specific call-to-action (CTA) elements.
+   - Example: A call-to-action button bounces once every few seconds to catch the user’s attention.
+   
+   */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+/*=========== Loading Spinner Animation ===========
+   - Where: Used for loading indicators when content is being fetched or processed.
+   - Example: A circular spinner rotates to show that content is loading.
+   */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/*=========== Accordion Animation ===========
+   - Where: Used to reveal and hide content within sections like FAQs, menus, or settings.
+   - Example: Content within a section slides down when the header is clicked, then slides up to hide when clicked again.
+   
+   */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.accordion-content.open {
+  max-height: 500px; /* Adjust to content */
+}
+
+/*=========== Card Flip Animation ===========
+   - Where: Often used for cards or elements that reveal more information when flipped, such as for portfolios or testimonials.
+   - Example: A card flips over to show the back when hovered over.
+   */
+
+@keyframes flip {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.flip {
+  animation: flip 1s ease-in-out;
+}
+
+/*===========  Shake Animation ===========
+   - Where: Used to indicate an error or invalid input in a form field.
+   - Example: A form field shakes side to side when the user submits an incorrect value.
+   */
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.shake {
+  animation: shake 0.5s ease;
+}
+
+/* =========== Typewriter Effect Animation ===========
+   - Where: Used for headlines or text to simulate a typewriting animation where text appears letter by letter.
+   - Example: A hero section displays the headline letter by letter.
+   */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.typewriter {
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30, end) forwards;
+}
+
+/*=========== Scroll Reveal Animation ===========
+   - Where: Animates elements as they enter the viewport while the user scrolls down the page.
+   - Example: Text sections slide in from the sides or fade in as you scroll.
+   */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*===========  Page Transition Animation ===========
+   - Where: Used to animate the transition between different pages of the website.
+   - Example: The content fades out when leaving a page and fades in on the next page.
+   */
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page-transition {
+  animation: pageFade 0.5s ease-in;
+}
+
+/*=========== Sticky Header with Scroll Shrink ===========
+   - Where: Applies to navigation bars that shrink when the user scrolls down the page.
+   - Example: The header becomes smaller as you scroll, saving space on the screen.
+   
+   */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: height 0.3s ease;
+}
+.sticky-header.shrink {
+  height: 50px;
+}

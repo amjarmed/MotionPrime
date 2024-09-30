@@ -1,0 +1,18 @@
+{
+  "name": "motionprime",
+  "version": "1.0.0",
+  "description": "MotionPrime is a lightweight animation library offering 14 essential animations for modern web development. Designed for simplicity and flexibility, it allows you to enhance your website with smooth, responsive animations, making your web pages more dynamic and engaging.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "cleancss -o dist/motionprime.min.css src/MotionPrime.css",
+    "build": "npm run build:css",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-css": "^5.3.3"
+  }
+}

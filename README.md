@@ -27,7 +27,7 @@ Or, if you prefer, simply include it via a CDN:
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.motionprime.com/v1/motionprime.min.css"
+  href="https://cdn.jsdelivr.net/npm/motionprime/dist/motionprime.min.css"
 />
 ```
 
